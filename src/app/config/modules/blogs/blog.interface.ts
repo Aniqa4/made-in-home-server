@@ -1,5 +1,5 @@
 export type Blog = {
-  id: string;
+  id: number;
   blogTitle: string;
   nameOfWriterID: number;
   nameOfWriter: string;

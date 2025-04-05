@@ -3,7 +3,7 @@ import { Blog } from './blogs/blog.interface';
 
 const blogSchema = new Schema<Blog>({
   id: {
-    type: String,
+    type: Number,
   },
   blogTitle: {
     type: String,
