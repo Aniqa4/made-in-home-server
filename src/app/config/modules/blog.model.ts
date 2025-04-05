@@ -1,7 +1,7 @@
 import { Schema, model, connect } from 'mongoose';
-import { Product } from './products/product.interface';
+import { Product } from './blogs/blog.interface';
 
-const productSchema = new Schema<Product>({
+const blogSchema = new Schema<Product>({
   id: { type: String },
   productName: { type: String, required: true },
   Description: { type: String },
@@ -12,4 +12,4 @@ const productSchema = new Schema<Product>({
   image_url: { type: String },
 });
 
-export const ProductModel = model<Product>('Product', productSchema);
+export const ProductModel = model<Product>('Product', blogSchema);
