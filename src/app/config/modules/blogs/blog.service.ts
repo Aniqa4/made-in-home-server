@@ -1,8 +1,8 @@
-import { ProductModel } from '../blog.model';
-import { Product } from './blog.interface';
+import { BlogModel } from '../blog.model';
+import { Blog } from './blog.interface';
 
-const createBlogToDB = async (blog: Product) => {
-  const result = await ProductModel.create(blog);
+const createBlogToDB = async (blog: Blog) => {
+  const result = await BlogModel.create(blog);
   return result;
 };
 

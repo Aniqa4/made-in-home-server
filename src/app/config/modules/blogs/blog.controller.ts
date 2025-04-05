@@ -3,9 +3,9 @@ import { blogServices } from './blog.service';
 
 const createBlog = async (req: Request, res: Response) => {
   try {
-    const blog = req.body;
+    const { blog: blogData } = req.body;
 
-    const result = await blogServices.createBlogToDB(blog);
+    const result = await blogServices.createBlogToDB(blogData);
 
     res.status(200).json({
       sucess: true,

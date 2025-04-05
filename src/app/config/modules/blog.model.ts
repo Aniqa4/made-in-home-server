@@ -1,15 +1,45 @@
 import { Schema, model, connect } from 'mongoose';
-import { Product } from './blogs/blog.interface';
+import { Blog } from './blogs/blog.interface';
 
-const blogSchema = new Schema<Product>({
-  id: { type: String },
-  productName: { type: String, required: true },
-  Description: { type: String },
-  price: { type: String, required: true },
-  totalQty: { type: Number, required: true },
-  availbleQty: { type: Number },
-  soldQty: { type: Number },
-  image_url: { type: String },
+const blogSchema = new Schema<Blog>({
+  id: {
+    type: String,
+  },
+  blogTitle: {
+    type: String,
+    required: true,
+  },
+  nameOfWriter: {
+    type: String,
+    required: true,
+  },
+  nameOfWriterID: {
+    type: Number,
+    required: true,
+  },
+  categoryID: {
+    type: Number,
+    required: true,
+  },
+  categoryName: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  ingredients: {
+    type: [String],
+    default: [],
+    required: true,
+  },
+  likes: { type: Number },
+  views: { type: Number },
+  saved: { type: Number },
+  image_url: {
+    type: String,
+  },
 });
 
-export const ProductModel = model<Product>('Product', blogSchema);
+export const BlogModel = model<Blog>('blog', blogSchema);

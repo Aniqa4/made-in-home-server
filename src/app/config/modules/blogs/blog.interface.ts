@@ -1,10 +1,14 @@
-export type Product = {
+export type Blog = {
   id: string;
-  productName: string;
-  Description: string;
-  price: string;
-  totalQty: number;
-  availbleQty: number;
-  soldQty: number;
+  blogTitle: string;
+  nameOfWriterID: number;
+  nameOfWriter: string;
+  description: string;
+  ingredients: string[];
+  categoryID: number;
+  categoryName: string;
+  likes: number;
+  views: number;
+  saved: number;
   image_url: string;
 };
